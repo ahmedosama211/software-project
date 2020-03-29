@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="1000.0" maxWidth="1000.0" minHeight="209.0" minWidth="420.0" prefHeight="442.0" prefWidth="585.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarysystem1.FXMLDocumentController">
+  <tabs>
+      <Tab fx:id="search_tab" style="-fx-background-color: ffffff;" text="Search">
+        <content>
+          <AnchorPane fx:id="search_pane" maxHeight="412.0" maxWidth="600.0" minHeight="200.0" minWidth="500.0" prefHeight="412.0" prefWidth="586.0" style="-fx-background-color: ACD1E9;">
+               <children>
+                  <TextField fx:id="Title_text" layoutX="42.0" layoutY="28.0" promptText="Title" />
+                  <TextField fx:id="Author_text" layoutX="42.0" layoutY="80.0" promptText="Author" />
+                  <TextField fx:id="ISBN_text" layoutX="42.0" layoutY="139.0" promptText="ISBN" />
+                  <Button fx:id="Search_button" layoutX="90.0" layoutY="193.0" mnemonicParsing="false" onAction="#searchButtonAction" style="-fx-background-color: ffffff;" text="Search" />
+                  <Label fx:id="Result2_label" layoutX="339.0" layoutY="71.0" prefHeight="18.0" prefWidth="141.0" />
+                  <Label fx:id="Result1_label" layoutX="339.0" layoutY="31.0" prefHeight="18.0" prefWidth="125.0" style="-fx-background-color: fffff;" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    <Tab fx:id="Login_tab" style="-fx-background-color: ffffff;" text="Login">
+      <content>
+        <AnchorPane fx:id="Login_pane" maxHeight="900.0" maxWidth="900.0" minHeight="286.0" minWidth="0.0" prefHeight="286.0" prefWidth="0.0" style="-fx-background-color: ACD1E9;">
+               <children>
+                  <Button fx:id="Login_button" layoutX="198.0" layoutY="117.0" mnemonicParsing="false" onAction="#loginButtonAction" style="-fx-background-color: ffffff;" text="Login" />
+                  <TextField fx:id="User_text" layoutX="145.0" layoutY="43.0" maxHeight="30.0" maxWidth="160.0" minHeight="25.0" minWidth="150.0" prefHeight="26.0" prefWidth="151.0" promptText="Username" style="-fx-background-color: fdf5c9;" />
+                  <Label fx:id="Username_label" layoutX="48.0" layoutY="47.0" maxHeight="25.0" maxWidth="68.0" minHeight="15.0" minWidth="55.0" prefHeight="18.0" prefWidth="68.0" style="-fx-background-color: ACD1E9;" text="Username" />
+                  <Label fx:id="Password_label" layoutX="47.0" layoutY="83.0" maxHeight="25.0" maxWidth="70.0" minHeight="15.0" minWidth="50.0" prefHeight="18.0" prefWidth="70.0" style="-fx-background-color: ACD1E9;" text="Password" />
+                  <PasswordField fx:id="Pass_field" layoutX="145.0" layoutY="79.0" maxHeight="30.0" maxWidth="160.0" minHeight="25.0" minWidth="150.0" prefHeight="26.0" prefWidth="151.0" promptText="Password" style="-fx-background-color: fdf5c9;" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab fx:id="Librarian_tab" style="-fx-background-color: ffffff;" text="Librarian">
+        <content>
+          <AnchorPane fx:id="Librarian_pane" minHeight="0.0" minWidth="0.0" prefHeight="762.0" prefWidth="343.0" style="-fx-background-color: ACD1E9;">
+               <children>
+                  <Button fx:id="Registertab_button" layoutX="44.0" layoutY="37.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="26.0" prefWidth="135.0" style="-fx-background-color: ffffff;" text="Register" />
+                  <Button fx:id="AddBooktab_button" layoutX="292.0" layoutY="37.0" mnemonicParsing="false" onAction="#addbookButtonAction" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: ffffff;" text="Add Book" />
+                  <Button fx:id="UpdateBooktab_button" layoutX="180.0" layoutY="159.0" mnemonicParsing="false" onAction="#updatebookButtonAction" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: F5FAFA;" text="Update Book" />
+                  <Button fx:id="UpdateMembertab_button" layoutX="42.0" layoutY="93.0" mnemonicParsing="false" onAction="#updatememberButtonAction" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: F5FAFA;" text="Update Member" />
+                  <Button fx:id="Checkouttab_button" layoutX="288.0" layoutY="93.0" mnemonicParsing="false" onAction="#chechkouttabButtonAction" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: F5FAFA;" text="Checkout" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="ADD_tab" style="-fx-background-color: ffffff;" text="Add">
+        <content>
+          <AnchorPane fx:id="ADD_pane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: ACD1E9;">
+               <children>
+                  <TextField fx:id="Title1_text" layoutX="41.0" layoutY="30.0" promptText="Title" />
+                  <TextField fx:id="Author1_text" layoutX="41.0" layoutY="80.0" promptText="Author" />
+                  <TextField fx:id="ISBN1_text" layoutX="319.0" layoutY="30.0" promptText="ISBN" />
+                  <TextField fx:id="State_text" layoutX="319.0" layoutY="80.0" promptText="State" />
+                  <TextField fx:id="Location_text" layoutX="41.0" layoutY="139.0" promptText="Location" />
+                  <Button fx:id="ADD_button" layoutX="224.0" layoutY="193.0" mnemonicParsing="false" onAction="#addButtonAction" style="-fx-background-color: ffffff;" text="ADD" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="Update_tab" style="-fx-background-color: ffffff;" text="Update Membership">
+        <content>
+          <AnchorPane fx:id="Update_pane" minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="523.0" style="-fx-background-color: ACD1E9;">
+               <children>
+                  <TextField fx:id="ID_text" layoutX="45.0" layoutY="36.0" promptText="ID" style="-fx-background-color: ffffff;" />
+                  <Button fx:id="Update_button" layoutX="91.0" layoutY="90.0" mnemonicParsing="false" onAction="#updateButtonAction" style="-fx-background-color: ffffff;" text="Update" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="Issue_tab" style="-fx-background-color: ffffff;" text="Issue">
+        <content>
+          <AnchorPane fx:id="Issue_pane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: ACD1E9;">
+               <children>
+                  <TextField fx:id="ISBN2_text" layoutX="31.0" layoutY="35.0" promptText="ISBN" style="-fx-background-color: ffffff;" />
+                  <TextField fx:id="State1_text" layoutX="293.0" layoutY="35.0" promptText="State" style="-fx-background-color: ffffff;" />
+                  <Button fx:id="Issue_button" layoutX="200.0" layoutY="86.0" mnemonicParsing="false" onAction="#issueButtonAction" style="-fx-background-color: ffffff;" text="Issue" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="Checkout_tab" style="-fx-background-color: ffffff;" text="Checkout">
+        <content>
+          <AnchorPane fx:id="Checkout_pane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: ACD1E9;">
+               <children>
+                  <Button fx:id="Checkout_button" layoutX="348.0" layoutY="85.0" mnemonicParsing="false" onAction="#chechkoutButtonAction" style="-fx-background-color: ffffff;" text="Checkout" />
+                  <Button fx:id="Retrieve_button" layoutX="108.0" layoutY="85.0" mnemonicParsing="false" onAction="#retrieveButtonAction" style="-fx-background-color: ffffff;" text="Retrieve" />
+                  <TextField fx:id="ISBN3_text" layoutX="64.0" layoutY="28.0" promptText="ISBN" style="-fx-background-color: ffffff;" />
+                  <TextField fx:id="ID2_text" layoutX="307.0" layoutY="28.0" promptText="ID" style="-fx-background-color: ffffff;" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    <Tab fx:id="Register_tab" style="-fx-background-color: ffffff;" text="Register">
+      <content>
+        <AnchorPane fx:id="Register_pane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: ACD1E9;">
+               <children>
+                  <TextField fx:id="FirstName_text" layoutX="56.0" layoutY="33.0" promptText="FirstName" style="-fx-background-color: ffffff;" />
+                  <TextField fx:id="LastName_text" layoutX="56.0" layoutY="102.0" promptText="LastName" style="-fx-background-color: ffffff;" />
+                  <TextField fx:id="Date_text" layoutX="304.0" layoutY="33.0" promptText="Date" style="-fx-background-color: ffffff;" />
+                  <TextField fx:id="Address_text" layoutX="304.0" layoutY="102.0" promptText="Address" style="-fx-background-color: ffffff;" />
+                  <Button fx:id="Register_button" layoutX="205.0" layoutY="166.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: ffffff;" text="Register " />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
